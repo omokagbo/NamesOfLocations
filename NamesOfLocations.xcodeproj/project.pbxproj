@@ -16,6 +16,7 @@
 		B40BB87F2702F2A000AEDD18 /* NamesOfLocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BB87E2702F2A000AEDD18 /* NamesOfLocationsTests.swift */; };
 		B40BB8892702F2A000AEDD18 /* NamesOfLocationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BB8882702F2A000AEDD18 /* NamesOfLocationsUITests.swift */; };
 		B40BB88B2702F2A000AEDD18 /* NamesOfLocationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BB88A2702F2A000AEDD18 /* NamesOfLocationsUITestsLaunchTests.swift */; };
+		B40BB89D2702F34300AEDD18 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BB89C2702F34300AEDD18 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B40BB8842702F2A000AEDD18 /* NamesOfLocationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NamesOfLocationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40BB8882702F2A000AEDD18 /* NamesOfLocationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesOfLocationsUITests.swift; sourceTree = "<group>"; };
 		B40BB88A2702F2A000AEDD18 /* NamesOfLocationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesOfLocationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B40BB89C2702F34300AEDD18 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,11 @@
 		B40BB8662702F29A00AEDD18 /* NamesOfLocations */ = {
 			isa = PBXGroup;
 			children = (
-				B40BB8672702F29A00AEDD18 /* AppDelegate.swift */,
-				B40BB8692702F29A00AEDD18 /* SceneDelegate.swift */,
-				B40BB86B2702F29A00AEDD18 /* ViewController.swift */,
-				B40BB86D2702F29A00AEDD18 /* Main.storyboard */,
-				B40BB8702702F29F00AEDD18 /* Assets.xcassets */,
-				B40BB8722702F29F00AEDD18 /* LaunchScreen.storyboard */,
-				B40BB8752702F2A000AEDD18 /* Info.plist */,
+				B40BB8972702F2E600AEDD18 /* App+Scene Delegate */,
+				B40BB8982702F2F200AEDD18 /* Controller */,
+				B40BB8992702F2FB00AEDD18 /* Storyboards */,
+				B40BB89A2702F31000AEDD18 /* Resources */,
+				B40BB89B2702F31D00AEDD18 /* Helpers */,
 			);
 			path = NamesOfLocations;
 			sourceTree = "<group>";
@@ -125,6 +125,49 @@
 				B40BB88A2702F2A000AEDD18 /* NamesOfLocationsUITestsLaunchTests.swift */,
 			);
 			path = NamesOfLocationsUITests;
+			sourceTree = "<group>";
+		};
+		B40BB8972702F2E600AEDD18 /* App+Scene Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B40BB8672702F29A00AEDD18 /* AppDelegate.swift */,
+				B40BB8692702F29A00AEDD18 /* SceneDelegate.swift */,
+			);
+			path = "App+Scene Delegate";
+			sourceTree = "<group>";
+		};
+		B40BB8982702F2F200AEDD18 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B40BB86B2702F29A00AEDD18 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B40BB8992702F2FB00AEDD18 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B40BB86D2702F29A00AEDD18 /* Main.storyboard */,
+				B40BB8722702F29F00AEDD18 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B40BB89A2702F31000AEDD18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B40BB8702702F29F00AEDD18 /* Assets.xcassets */,
+				B40BB8752702F2A000AEDD18 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B40BB89B2702F31D00AEDD18 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B40BB89C2702F34300AEDD18 /* UIViewController+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40BB89D2702F34300AEDD18 /* UIViewController+Extension.swift in Sources */,
 				B40BB86C2702F29A00AEDD18 /* ViewController.swift in Sources */,
 				B40BB8682702F29A00AEDD18 /* AppDelegate.swift in Sources */,
 				B40BB86A2702F29A00AEDD18 /* SceneDelegate.swift in Sources */,
@@ -441,7 +485,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FR92VWWUNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NamesOfLocations/Info.plist;
+				INFOPLIST_FILE = NamesOfLocations/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -469,7 +513,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FR92VWWUNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NamesOfLocations/Info.plist;
+				INFOPLIST_FILE = NamesOfLocations/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

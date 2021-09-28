@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NamesOfLocations
 //
-//  Created by Decagon on 28/09/2021.
+//  Created by Emmanuel Omokagbo on 28/09/2021.
 //
 
 import UIKit

@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class ViewController: UIViewController {
     
@@ -31,13 +32,20 @@ class ViewController: UIViewController {
     }
     
     private func addUserLocationToMap() {
-        LocationManager.shared.getUserLocation { [weak self] location in
-            DispatchQueue.main.async {
-                let pin = MKPointAnnotation()
-                pin.coordinate = location.coordinate
-                self?.mapView.setRegion(MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000), animated: true)
-                self?.mapView.addAnnotation(pin)
+        DispatchQueue.main.async {
+            LocationManager.shared.getUserLocation { [weak self] location in
+                self?.addMapPin(with: location)
             }
+        }
+    }
+    
+    private func addMapPin(with location: CLLocation) {
+        let pin = MKPointAnnotation()
+        pin.coordinate = location.coordinate
+        mapView.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
+        mapView.addAnnotation(pin)
+        LocationManager.shared.resolveLocationName(with: location) { [weak self] locationName in
+            self?.title = locationName
         }
     }
     

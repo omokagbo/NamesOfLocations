@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 
 class LocationManager: NSObject {
@@ -24,6 +25,25 @@ class LocationManager: NSObject {
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
+    }
+    
+    public func resolveLocationName(with location: CLLocation, completion: @escaping ((String?) -> Void)) {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+            guard let place = placemarks?.first, error == nil else {
+                completion(nil)
+                return
+            }
+            print(place)
+            var name = ""
+            if let locality = place.locality {
+                name += locality
+            }
+            if let adminRegion = place.administrativeArea {
+                name += ", \(adminRegion)"
+            }
+            completion(name)
+        }
     }
 }
 

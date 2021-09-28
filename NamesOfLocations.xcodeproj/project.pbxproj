@@ -17,6 +17,7 @@
 		B40BB8892702F2A000AEDD18 /* NamesOfLocationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BB8882702F2A000AEDD18 /* NamesOfLocationsUITests.swift */; };
 		B40BB88B2702F2A000AEDD18 /* NamesOfLocationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BB88A2702F2A000AEDD18 /* NamesOfLocationsUITestsLaunchTests.swift */; };
 		B40BB89D2702F34300AEDD18 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BB89C2702F34300AEDD18 /* UIViewController+Extension.swift */; };
+		B452DAC1270307AD00F5AC43 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B452DAC0270307AD00F5AC43 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B40BB8882702F2A000AEDD18 /* NamesOfLocationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesOfLocationsUITests.swift; sourceTree = "<group>"; };
 		B40BB88A2702F2A000AEDD18 /* NamesOfLocationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesOfLocationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B40BB89C2702F34300AEDD18 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		B452DAC0270307AD00F5AC43 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				B40BB89C2702F34300AEDD18 /* UIViewController+Extension.swift */,
+				B452DAC0270307AD00F5AC43 /* LocationManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				B40BB89D2702F34300AEDD18 /* UIViewController+Extension.swift in Sources */,
 				B40BB86C2702F29A00AEDD18 /* ViewController.swift in Sources */,
+				B452DAC1270307AD00F5AC43 /* LocationManager.swift in Sources */,
 				B40BB8682702F29A00AEDD18 /* AppDelegate.swift in Sources */,
 				B40BB86A2702F29A00AEDD18 /* SceneDelegate.swift in Sources */,
 			);
